@@ -1,0 +1,25 @@
+.nav {
+    grid-area: n;
+    background-color:darkturquoise;
+  }
+
+.item {
+  background-color: cyan;
+  padding: 20px;
+}
+
+.item a {
+  text-decoration: none;
+  color: black;
+}
+
+.item a.active {
+  color:grey;
+}
+
+.sideBar {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  margin-top: 20px;
+  padding: 15px;
+}

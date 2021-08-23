@@ -10,56 +10,7 @@
   grid-gap: 10px;
 }
 
-.header {
-  grid-area: h;
-  background-color:#6B8E23;
-
+.app-wrapper-content {
+    grid-area: c;
+    background-color: bisque;
 }
-.header img {
-  width: 84px;
-  height: 59px;
-}
-
-.nav {
-  grid-area: n;
-  background-color:darkturquoise;
-}
-
-.content {
-  grid-area: c;
-  background-color: bisque;
-}
-.content img {
-  width:1030px;
-  height:200px;
-}
-
-.ava {
-  display: grid;
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-  grid-template-areas: 
-  'ava p'
-  'ava p';
-  margin: 20px;
-  grid-gap: 10px;
-}
-.ava img {
-  grid-area: ava;
-  width: 100px;
-  height: 100px;
-}
-.p {
-  grid-area: p;
-  line-height: 1.6;
-}
-
-
-/*.profile {
-  background-color: deeppink;
-  width:170px;
-  height: 40px;
-}
-.profile a {
-  font-size: 30px;
-}*/

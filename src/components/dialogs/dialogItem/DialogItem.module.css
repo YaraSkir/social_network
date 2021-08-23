@@ -1,0 +1,12 @@
+
+.dialog {
+    padding: 15px;
+}
+
+.dialog a {
+    color: indianred;
+}
+
+.dialog a.active {
+    color: indigo;
+}

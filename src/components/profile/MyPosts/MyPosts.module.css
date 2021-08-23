@@ -1,0 +1,16 @@
+.newPost {
+    margin: 20px;
+}
+
+.buttonAdd {
+    background-color: rgb(43, 226, 58);
+}
+
+.buttonRemove {
+    background-color: crimson;
+}
+
+.posts {
+    margin: 20px;
+    padding: 5px;
+}
