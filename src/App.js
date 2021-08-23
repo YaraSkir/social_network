@@ -26,10 +26,8 @@ const App = (props) => {
               updateNewMessage={props.updateNewMessage} 
               messageText={props.store.messagesPage.messageText} />} />
          <Route path='/profile' render={ () => <Profile 
-              posts={props.store.profilePage.postData} 
-              //addPost={props.addPost} 
-              //updateNewPostText={props.updateNewPostText} 
-              //newPostText={props.store.profilePage.newPostText} 
+              posts={props.store.profilePage.postData}
+              newPostText={props.store.profilePage.newPostText} 
               dispatch={props.dispatch} />}/>
          <Route path='/music' render={ () => <Music />}/>
          <Route path='/news' render={ () => <News />}/>
