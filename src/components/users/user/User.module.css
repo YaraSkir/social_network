@@ -1,0 +1,10 @@
+.img {
+    width: 100px;
+    height: 100px;
+}
+.follow {
+    background-color: rgb(42, 233, 42);
+}
+.unfollow {
+    background-color: rgb(2, 139, 7);
+}

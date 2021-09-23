@@ -1,36 +1,29 @@
 import React from 'react';
-
 import './App.css';
-import Nav from './components/navbar/Nav.jsx';
 import Header from './components/header/Header.jsx';
-import Dialogs from './components/dialogs/Dialods';
 import Profile from './components/profile/Profile';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Music from './components/music/Music';
 import Settings from './components/settings/Settings';
 import News from './components/news/News';
+import DialogsContainer from './components/dialogs/DialogsContainer';
+import NavContainer from './components/navbar/NavContainer';
+import UsersContainer from './components/users/UsersContainer';
 
 
 
-const App = (props) => {
+const App = () => {
   return (
    
     <div className='app-wrapper'>
        <Header />
-       <Nav sideBar={props.store.sideBar} />
+       <NavContainer />
        <div className='app-wrapper-content'>
-         <Route path='/dialogs' render={ () => <Dialogs 
-              dialogs={props.store.messagesPage.dialogsData} 
-              messages={props.store.messagesPage.messagesData} 
-              addMessage={props.addMessage} 
-              updateNewMessage={props.updateNewMessage} 
-              messageText={props.store.messagesPage.messageText} />} />
-         <Route path='/profile' render={ () => <Profile 
-              posts={props.store.profilePage.postData}
-              newPostText={props.store.profilePage.newPostText} 
-              dispatch={props.dispatch} />}/>
+         <Route path='/dialogs' render={ () => <DialogsContainer />} />
+         <Route path='/profile' render={ () => <Profile />}/>
          <Route path='/music' render={ () => <Music />}/>
          <Route path='/news' render={ () => <News />}/>
+         <Route path='/users' render={ () => <UsersContainer />}/>
          <Route path='/settings' render={ () => <Settings />}/>
        </div>
     </div>

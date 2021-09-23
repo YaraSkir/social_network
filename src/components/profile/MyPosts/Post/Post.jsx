@@ -8,7 +8,7 @@ const Post = (props) => {
             <img src='https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'/>
             {props.message}
            <div>
-                {props.like} <span>likes</span>
+                {props.likesCount} <span>like</span>
           </div>
         </div>
         

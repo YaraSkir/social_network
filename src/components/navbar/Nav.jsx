@@ -5,7 +5,7 @@ import SideBar from './sidebar/SideBar';
 
 
 const Nav = (props) => {
-  let sideBar = props.sideBar.map(sideBar => <SideBar sideBar={sideBar.name} />);
+  let sideBar = props.sideBar.map(sideBar => <SideBar sideBar={sideBar.name} key={sideBar.id} />);
     return (
       <nav className={styles.nav}>
         <div className={styles.item}>
@@ -19,6 +19,9 @@ const Nav = (props) => {
         </div>
         <div className={styles.item}>
           <NavLink to='/music' activeClassName={styles.active}>Music</NavLink>
+        </div>
+        <div className={styles.item}>
+          <NavLink to='/users' activeClassName={styles.active}>Users</NavLink>
         </div>
         <div className={styles.item}> 
           <NavLink to='settings' activeClassName={styles.active}>Settings</NavLink>

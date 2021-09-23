@@ -1,3 +1,6 @@
+import profileReducer from './profileReducer';
+import messagesReducer from './messagesReducer';
+
 let store = {
     _state: {
         profilePage: {
@@ -32,36 +35,14 @@ let store = {
         this._callSubscriber = observer;
     },
 
-    addMessage() {
-        let addMessage = {
-            id: 5,
-            message: this._state.messagesPage.messageText
-        }
-        this._state.messagesPage.messagesData.push(addMessage);
-        this._state.messagesPage.messageText = '';
-        this._callSubscriber();
-    },
-    updateNewMessage(newMessage) {
-        this._state.messagesPage.messageText = newMessage;
-        this._callSubscriber();
-    },
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            let newPost = {
-                id: 3,
-                message: this._state.profilePage.newPostText,
-                like: 24
-            };
-           
-            this._state.profilePage.postData.push(newPost);
-            this._state.profilePage.newPostText = '';
-            this._callSubscriber(this._state);
-           
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._callSubscriber();
+
+        this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+        this._callSubscriber();
     }
+        
 }
 
 window.store = store;
